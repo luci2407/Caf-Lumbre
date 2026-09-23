@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café Lumbre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!----Nav-->
+<header>
+  <div class="nav">
+    <a class="wordmark" href="index.html"><img src="pic/Logo1.png" alt="Terrazas" class="logo-img"></a>
+    <nav class="links">
+      <a href="html/proceso.html">Proceso</a>
+      <a href="html/productos.html">Café</a>
+      <a href="html/origen.html">Origen</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-haspopup="dialog">
+      Carrito <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!----Hero-->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Café de altura, cortado a mano en las montañas de México.</h1>
+      <p class="lede">Trabajamos directamente con cooperativas de Veracruz, Chiapas y Oaxaca que cosechan bajo sombra, en parcelas familiares que llevan generaciones dando fruto.</p>
+      <div class="hero-ctas">
+        <a href="html/productos.html" class="btn btn-primary">Ver el café</a>
+        <a href="#proceso" class="btn btn-ghost">Cómo lo hacemos</a>
+      </div>
+    </div>
+    <img class="terrain" src="https://i.pinimg.com/1200x/17/e6/44/17e644e3753b3bc26781514708dd3530.jpg" alt="">
+  </div>
+</section>
+
+<section class="section" id="proceso">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>De la planta a la taza</h2>
+      <p>Cada bolsa sigue el mismo camino artesanal, sin atajos industriales.</p>
+    </div>
+  </div>
+  <div class="wrap scrollx">
+    <div class="process">
+      <div class="step"><span class="num">01</span><h3>Cosecha</h3><p>Corte manual, solo cerezas maduras, una por una en cada arbusto.</p></div>
+      <div class="step"><span class="num">02</span><h3>Despulpado</h3><p>Se retira la piel el mismo día, antes de que empiece a fermentar de más.</p></div>
+      <div class="step"><span class="num">03</span><h3>Fermentación</h3><p>24 a 36 horas en tanques de piedra para revelar los azúcares del grano.</p></div>
+      <div class="step"><span class="num">04</span><h3>Secado al sol</h3><p>Sobre patios de tierra, volteado a mano durante ocho a doce días.</p></div>
+      <div class="step"><span class="num">05</span><h3>Tueste</h3><p>Tandas pequeñas, tostadas y empacadas la misma semana del envío.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tienda">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Nuestro café</h2>
+      <p>Tres orígenes, tres perfiles. Recién tostado bajo pedido.</p>
+    </div>
+    <div class="products" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="section sustain" id="origen">
+  <div class="wrap sustain-grid">
+    <div>
+      <h2>Sostenible desde la raíz</h2>
+      <p>Compramos a precio justo, muy por encima del mercado de bolsa, y reinvertimos en viveros de sombra que protegen el suelo y a los pájaros migratorios que anidan en él.</p>
+      <div class="stat-row">
+        <div class="stat"><b>38</b><span>familias productoras</span></div>
+        <div class="stat"><b>+22%</b><span>sobre precio de mercado</span></div>
+        <div class="stat"><b>0</b><span>agroquímicos de síntesis</span></div>
+      </div>
+    </div>
+    <svg class="terraces" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terrazas de cultivo escalonadas">
+      <g fill="none" stroke="#EDE4D3" stroke-width="1.5" opacity="0.5">
+        <path d="M0 30 Q240 -10 480 30"/>
+        <path d="M0 80 Q240 40 480 80"/>
+        <path d="M0 130 Q240 90 480 130"/>
+        <path d="M0 180 Q240 140 480 180"/>
+        <path d="M0 230 Q240 190 480 230"/>
+        <path d="M0 280 Q240 240 480 280"/>
+      </g>
+      <g fill="#D9A441" opacity="0.85">
+        <circle cx="60" cy="60" r="4"/><circle cx="120" cy="55" r="4"/><circle cx="180" cy="62" r="4"/>
+        <circle cx="90" cy="110" r="4"/><circle cx="160" cy="105" r="4"/><circle cx="230" cy="112" r="4"/>
+        <circle cx="300" cy="60" r="4"/><circle cx="360" cy="56" r="4"/><circle cx="420" cy="63" r="4"/>
+        <circle cx="270" cy="160" r="4"/><circle cx="340" cy="155" r="4"/><circle cx="400" cy="162" r="4"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="wordmark"><span class="bean"></span>Terrazas</div>
+      <p>Café de grano mexicano, tostado por lotes pequeños y enviado directo desde la montaña.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#tienda">Café</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#origen">Origen</a>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-label="Carrito de compras" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Tu carrito</h3>
+    <button id="closeCart" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems">
+    <p class="cart-empty">Tu carrito está vacío.</p>
+  </div>
+  <div class="drawer-foot">
+    <div class="drawer-total"><span>Total</span><b id="drawerTotal">$0 MXN</b></div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>Finalizar pedido</button>
+    <p class="fine">Envío calculado al finalizar. Tostado la misma semana.</p>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+
+</body>
+</html>

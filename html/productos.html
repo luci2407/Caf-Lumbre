@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café Lumbre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/productos.css">
+</head>
+<body>
+
+<!----Nav-->
+<header>
+  <div class="nav">
+    <a class="wordmark" href="../index.html"><img src="../pic/Logo1.png" alt="Terrazas" class="logo-img"></a>
+    <nav class="links">
+      <a href="html/proceso.html">Proceso</a>
+      <a href="html/productos.html">Café</a>
+      <a href="html/origen.html">Origen</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-haspopup="dialog">
+      Carrito <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>Nuestro café</h1>
+    <p>Tres orígenes, tres perfiles. Recién tostado bajo pedido y enviado directo desde la montaña.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="products" id="productGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="wordmark"><span class="bean"></span>Terrazas</div>
+    <div class="foot-links">
+      <a href="index.html#proceso">Proceso</a>
+      <a href="index.html#origen">Origen</a>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-label="Carrito de compras" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Tu carrito</h3>
+    <button id="closeCart" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems">
+    <p class="cart-empty">Tu carrito está vacío.</p>
+  </div>
+  <div class="drawer-foot">
+    <div class="drawer-total"><span>Total</span><b id="drawerTotal">$0 MXN</b></div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>Finalizar pedido</button>
+    <p class="fine">Envío calculado al finalizar. Tostado la misma semana.</p>
+  </div>
+</aside>
+
+<script src="../script/productos.js"></script>
+
+</body>
+</html>

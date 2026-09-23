@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terrazas — Resumen del pedido</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/pago.css">
+</head>
+<body>
+
+<!----Nav-->
+<header>
+  <div class="nav">
+    <a class="wordmark" href="../index.html"><img src="../pic/Logo1.png" alt="Terrazas" class="logo-img"></a>
+    <nav class="links">
+      <a href="html/proceso.html">Proceso</a>
+      <a href="html/productos.html">Café</a>
+      <a href="html/origen.html">Origen</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-haspopup="dialog">
+      Carrito <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>Resumen de tu pedido</h1>
+    <p>Revisa los productos y realiza la transferencia para confirmarlo. Te avisaremos por correo en cuanto la recibamos.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap order-grid">
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Pedido <span id="folio">—</span></h2>
+      </div>
+      <div id="orderItems"></div>
+      <div class="order-total">
+        <span>Total</span>
+        <b id="orderTotal">$0 MXN</b>
+      </div>
+    </div>
+
+    <div class="panel transfer">
+      <div class="panel-head">
+        <h2>Datos para transferencia</h2>
+      </div>
+      <dl class="transfer-list">
+        <div class="t-row">
+          <dt>Banco</dt>
+          <dd>BBVA México</dd>
+        </div>
+        <div class="t-row">
+          <dt>Titular</dt>
+          <dd>Café Terrazas S. de R.L. de C.V.</dd>
+        </div>
+        <div class="t-row">
+          <dt>CLABE</dt>
+          <dd class="copyable" id="clabeValue">0121 8000 1234 5678 90
+            <button class="copy-btn" data-copy="012180001234567890" aria-label="Copiar CLABE">Copiar</button>
+          </dd>
+        </div>
+        <div class="t-row">
+          <dt>Referencia</dt>
+          <dd class="copyable" id="refValue">—
+            <button class="copy-btn" data-copy-target="refValue" aria-label="Copiar referencia">Copiar</button>
+          </dd>
+        </div>
+        <div class="t-row">
+          <dt>Monto a transferir</dt>
+          <dd id="transferAmount">$0 MXN</dd>
+        </div>
+      </dl>
+      <p class="transfer-note">Usa el folio como referencia y envía tu comprobante a <strong>pedidos@terrazascafe.mx</strong> para que empecemos a tostar.</p>
+    </div>
+
+  </div>
+
+  <p class="empty-note" id="emptyNote" hidden>Aún no tienes ningún pedido. <a href="productos.html">Ve a elegir tu café</a>.</p>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="wordmark"><span class="bean"></span>Terrazas</div>
+    <div class="foot-links">
+      <a href="../index.html#proceso">Proceso</a>
+      <a href="../index.html#origen">Origen</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script/pago.js"></script>
+
+</body>
+</html>
