@@ -6,8 +6,7 @@
       origin: 'Coatepec, Veracruz · 1,200 msnm',
       notes: 'Notas a piloncillo, cacao y cáscara de naranja.',
       price: 285,
-      bagColor: '#B5502D',
-      labelColor: '#D9A441'
+      image: '../pic/cafe1.png'
     },
     {
       id: 'chiapas-reserva',
@@ -15,8 +14,7 @@
       origin: 'Pueblo Nuevo, Chiapas · 1,450 msnm',
       notes: 'Cuerpo denso, ciruela madura y un final a especias.',
       price: 310,
-      bagColor: '#3B2417',
-      labelColor: '#EDE4D3'
+      image: '../pic/cafe2.png'
     },
     {
       id: 'oaxaca-mezcla',
@@ -24,28 +22,16 @@
       origin: 'Pluma Hidalgo, Oaxaca · 900 msnm',
       notes: 'Ligero y floral, con un toque final a miel silvestre.',
       price: 260,
-      bagColor: '#6B7654',
-      labelColor: '#EDE4D3'
+      image: '../pic/cafe3.png'
     }
   ];
 
   const money = n => '$' + n.toLocaleString('es-MX') + ' MXN';
 
-  function bagSVG(p) {
-    return `<svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M14 26 h92 v100 a10 10 0 0 1 -10 10 h-72 a10 10 0 0 1 -10 -10 z" fill="${p.bagColor}"/>
-      <path d="M14 26 q46 -14 92 0 v10 q-46 -12 -92 0 z" fill="${p.bagColor}" opacity="0.7"/>
-      <rect x="52" y="6" width="16" height="24" rx="3" fill="${p.bagColor}"/>
-      <rect x="26" y="66" width="68" height="30" rx="2" fill="${p.labelColor}" opacity="0.92"/>
-      <line x1="34" y1="78" x2="86" y2="78" stroke="${p.bagColor}" stroke-width="2" opacity="0.5"/>
-      <line x1="34" y1="86" x2="70" y2="86" stroke="${p.bagColor}" stroke-width="2" opacity="0.5"/>
-    </svg>`;
-  }
-
   const grid = document.getElementById('productGrid');
   grid.innerHTML = products.map(p => `
     <div class="card">
-      <div class="bag" style="background:${p.labelColor === '#EDE4D3' ? 'var(--cream)' : 'var(--cream-2)'}">${bagSVG(p)}</div>
+      <div class="bag"><img src="${p.image}" alt="${p.name}" loading="lazy"></div>
       <div class="card-body">
         <p class="origin-tag">${p.origin}</p>
         <h3>${p.name}</h3>
@@ -134,8 +120,8 @@
   });
 
   checkoutBtn.addEventListener('click', () => {
-     window.location.href = "../html/pago.html";
-  });
-  
+  window.location.href = "pago.html";
+});
+
   render();
 })();

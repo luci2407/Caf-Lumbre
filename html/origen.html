@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+            <title>Café lumbre</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="../css/origen.css">
+            <link rel="icon" type="image/png" href="../pic/Logo1.png">
+        </head>
+        <body>
+        <!----Nav-->
+        <header>
+            <div class="nav">
+                <a class="wordmark" href="../index.html"><img src="../pic/Logo1.png" alt="Terrazas" class="logo-img"></a>
+                <nav class="links">
+                <a href="proceso.html">Proceso</a>
+                <a href="productos.html">Café</a>
+                <a href="origen.html">Origen</a>
+                </nav>
+                <button class="cart-btn" id="openCart" aria-haspopup="dialog">
+                Carrito <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </header>
+        
+
+        <section class="page-head">
+        <div class="wrap">
+            <h1>Sostenible desde la raíz</h1>
+            <p>Compramos a precio justo, muy por encima del mercado de bolsa, y reinvertimos en viveros de sombra que protegen el suelo y a los pájaros migratorios que anidan en él.</p>
+        </div>
+        </section>
+
+        <section class="section stats-section">
+        <div class="wrap stat-row">
+            <div class="stat"><b>38</b><span>familias productoras</span></div>
+            <div class="stat"><b>+22%</b><span>sobre precio de mercado</span></div>
+            <div class="stat"><b>0</b><span>agroquímicos de síntesis</span></div>
+        </div>
+        </section>
+
+        <section class="section">
+        <div class="wrap">
+            <div class="region-grid">
+            <div class="region">
+                <p class="region-tag">Veracruz</p>
+                <h2>Coatepec, 1,200 msnm</h2>
+                <p>Parcelas familiares bajo sombra de plátano e ingas, cerca de la niebla que baja del Cofre de Perote. Cosecha entre diciembre y febrero.</p>
+            </div>
+            <div class="region">
+                <p class="region-tag">Chiapas</p>
+                <h2>Pueblo Nuevo, 1,450 msnm</h2>
+                <p>Terrazas escalonadas en laderas de la Sierra Madre, trabajadas por la misma cooperativa desde hace más de veinte años.</p>
+            </div>
+            <div class="region">
+                <p class="region-tag">Oaxaca</p>
+                <h2>Pluma Hidalgo, 900 msnm</h2>
+                <p>Microlotes de pequeños productores en la Sierra Sur, donde el café convive con árboles frutales y maíz de autoconsumo.</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="section commitment">
+        <div class="wrap commitment-grid">
+            <div>
+            <h2>Nuestro compromiso</h2>
+            <ul class="commitment-list">
+                <li>Contratos directos con cada cooperativa, sin intermediarios.</li>
+                <li>Pago adelantado antes de la cosecha, cuando las familias más lo necesitan.</li>
+                <li>Cero agroquímicos de síntesis: control de plagas con métodos tradicionales.</li>
+                <li>Cultivo bajo sombra, que conserva el suelo y da refugio a aves migratorias.</li>
+            </ul>
+            </div>
+            <svg class="terraces" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terrazas de cultivo escalonadas">
+            <g fill="none" stroke="#3B2417" stroke-width="1.5" opacity="0.35">
+                <path d="M0 30 Q240 -10 480 30"/>
+                <path d="M0 80 Q240 40 480 80"/>
+                <path d="M0 130 Q240 90 480 130"/>
+                <path d="M0 180 Q240 140 480 180"/>
+                <path d="M0 230 Q240 190 480 230"/>
+                <path d="M0 280 Q240 240 480 280"/>
+            </g>
+            <g fill="#B5502D" opacity="0.85">
+                <circle cx="60" cy="60" r="4"/><circle cx="120" cy="55" r="4"/><circle cx="180" cy="62" r="4"/>
+                <circle cx="90" cy="110" r="4"/><circle cx="160" cy="105" r="4"/><circle cx="230" cy="112" r="4"/>
+                <circle cx="300" cy="60" r="4"/><circle cx="360" cy="56" r="4"/><circle cx="420" cy="63" r="4"/>
+                <circle cx="270" cy="160" r="4"/><circle cx="340" cy="155" r="4"/><circle cx="400" cy="162" r="4"/>
+            </g>
+            </svg>
+        </div>
+        </section>
+
+        <footer>
+        <div class="wrap foot-grid">
+            <div class="wordmark"><span class="bean"></span>Café Lumbre</div>
+            <div class="foot-links">
+            <a href="proceso.html">Proceso</a>
+            <a href="productos.html">Café</a>
+            </div>
+        </div>
+        </footer>
+
+        <div class="overlay" id="overlay"></div>
+        <aside class="drawer" id="drawer" role="dialog" aria-label="Carrito de compras" aria-hidden="true">
+        <div class="drawer-head">
+            <h3>Tu carrito</h3>
+            <button id="closeCart" aria-label="Cerrar carrito">&times;</button>
+        </div>
+        <div class="drawer-items" id="drawerItems">
+            <p class="cart-empty">Tu carrito está vacío.</p>
+        </div>
+        <div class="drawer-foot">
+            <div class="drawer-total"><span>Total</span><b id="drawerTotal">$0 MXN</b></div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>Finalizar pedido</button>
+            <p class="fine">Envío calculado al finalizar.</p>
+        </div>
+        </aside>
+
+        <script src="../script/origen.js"></script>
+
+        </body>
+    </html>

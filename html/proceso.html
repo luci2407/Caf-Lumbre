@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+            <title>Café Lumbre</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="../css/proceso.css">
+            <link rel="icon" type="image/png" href="../pic/Logo1.png">
+        </head> 
+
+        <body>
+            <!----Nav-->
+            <header>
+            <div class="nav">
+                <a class="wordmark" href="../index.html"><img src="../pic/Logo1.png" alt="Terrazas" class="logo-img"></a>
+                <nav class="links">
+                <a href="proceso.html">Proceso</a>
+                <a href="productos.html">Café</a>
+                <a href="origen.html">Origen</a>
+                </nav>
+                <button class="cart-btn" id="openCart" aria-haspopup="dialog">
+                Carrito <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            </header>
+
+            <section class="page-head">
+            <div class="wrap">
+                <h1>De la planta a la taza</h1>
+                <p>Cada bolsa de Terrazas sigue el mismo camino artesanal, sin atajos industriales. Así es como el café llega de la montaña a tu taza.</p>
+            </div>
+            </section>
+
+            <section class="section">
+            <div class="wrap">
+                <ol class="process-list">
+                <li class="process-item">
+                    <span class="num">01</span>
+                    <div>
+                    <h2>Cosecha</h2>
+                    <p>Corte manual, cereza por cereza, solo cuando están completamente maduras. Cada productor pasa varias veces por el mismo arbusto durante la temporada para no cortar de más.</p>
+                    </div>
+                </li>
+                <li class="process-item">
+                    <span class="num">02</span>
+                    <div>
+                    <h2>Despulpado</h2>
+                    <p>La piel de la cereza se retira el mismo día del corte, antes de que el azúcar empiece a fermentar de más y afecte el sabor final.</p>
+                    </div>
+                </li>
+                <li class="process-item">
+                    <span class="num">03</span>
+                    <div>
+                    <h2>Fermentación</h2>
+                    <p>El grano descansa entre 24 y 36 horas en tanques de piedra. Este paso revela los azúcares naturales que luego se notan en taza.</p>
+                    </div>
+                </li>
+                <li class="process-item">
+                    <span class="num">04</span>
+                    <div>
+                    <h2>Secado al sol</h2>
+                    <p>Sobre patios de tierra, el café se voltea a mano durante ocho a doce días hasta alcanzar la humedad exacta para un tueste parejo.</p>
+                    </div>
+                </li>
+                <li class="process-item">
+                    <span class="num">05</span>
+                    <div>
+                    <h2>Tueste</h2>
+                    <p>Tandas pequeñas, tostadas y empacadas la misma semana en que se envían, para que el aroma llegue lo más fresco posible.</p>
+                    </div>
+                </li>
+                </ol>
+            </div>
+            </section>
+
+            <footer>
+            <div class="wrap foot-grid">
+                <div class="wordmark"><span class="bean"></span>Café Lumbre</div>
+                <div class="foot-links">
+                <a href="productos.html">Café</a>
+                <a href="origen.html">Origen</a>
+                </div>
+            </div>
+            </footer>
+
+            <div class="overlay" id="overlay"></div>
+            <aside class="drawer" id="drawer" role="dialog" aria-label="Carrito de compras" aria-hidden="true">
+            <div class="drawer-head">
+                <h3>Tu carrito</h3>
+                <button id="closeCart" aria-label="Cerrar carrito">&times;</button>
+            </div>
+            <div class="drawer-items" id="drawerItems">
+                <p class="cart-empty">Tu carrito está vacío.</p>
+            </div>
+            <div class="drawer-foot">
+                <div class="drawer-total"><span>Total</span><b id="drawerTotal">$0 MXN</b></div>
+                <button class="checkout-btn" id="checkoutBtn" disabled>Finalizar pedido</button>
+                <p class="fine">Envío calculado al finalizar.</p>
+            </div>
+            </aside>
+
+            <script src="../script/proceso.js"></script>
+
+        </body>
+    </html>
